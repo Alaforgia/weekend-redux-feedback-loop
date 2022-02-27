@@ -1,16 +1,20 @@
 import React from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function Support() {
   const [support, setSupport] = useState("");
   const dispatch = useDispatch();
-  onSubmit = (event) => {
+  const history = useHistory();
+  const onSubmit = (event) => {
     event.preventDefault();
     dispatch({
       type: "ADD_SUPPORT",
       payload: { support },
     });
     setSupport("");
-    // history.push("/");
+    history.push("/comments");
   };
   return (
     <>

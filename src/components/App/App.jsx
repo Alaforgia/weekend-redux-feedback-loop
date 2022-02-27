@@ -18,7 +18,7 @@ function App() {
         </header>
         <div>
           {/* Feelings component */}
-          <Route path="/">
+          <Route exact path="/">
             <Feelings />
           </Route>
           <Route path="/understanding">

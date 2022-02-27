@@ -15,6 +15,7 @@ function Review() {
   return (
     <>
       <h1>Review Your Feedback</h1>
+      <ul></ul>
       <button onSubmit={onSubmit} type="submit">
         Submit
       </button>

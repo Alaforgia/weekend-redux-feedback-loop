@@ -9,25 +9,25 @@ import { Provider } from "react-redux";
 
 const feelingReducer = (state = [], action) => {
   if (action.type === "ADD_FEELING") {
-    return action.payload;
+    return action.payload.feeling;
   }
   return state;
 };
 const understandingReducer = (state = [], action) => {
   if (action.type === "ADD_UNDERSTANDING") {
-    return action.payload;
+    return action.payload.understanding;
   }
   return state;
 };
 const supportReducer = (state = [], action) => {
   if (action.type === "ADD_SUPPORT") {
-    return action.payload;
+    return action.payload.support;
   }
   return state;
 };
 const commentReducer = (state = [], action) => {
   if (action.type === "ADD_COMMENT") {
-    return action.payload;
+    return action.payload.comment;
   }
   return state;
 };

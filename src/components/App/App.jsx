@@ -5,6 +5,7 @@ import Understanding from "../Understanding/Understanding";
 import Support from "./Support/Support";
 import Comments from "./Comments/Comments";
 import Review from "../Review/Review";
+import Success from "../Success/Success";
 import "./App.css";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/review">
             <Review />
+          </Route>
+          <Route path="/success">
+            <Success />
           </Route>
         </div>
       </div>

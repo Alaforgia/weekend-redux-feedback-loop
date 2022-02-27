@@ -1,16 +1,20 @@
 import React from "react";
-
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 function Comments() {
   const [comment, setComment] = useState("");
   const dispatch = useDispatch();
-  onSubmit = (event) => {
+  const history = useHistory();
+
+  const onSubmit = (event) => {
     event.preventDefault();
     dispatch({
       type: "ADD_COMMENT",
       payload: { comment },
     });
     setComment("");
-    // history.push("/");
+    history.push("/review");
   };
   return (
     <>

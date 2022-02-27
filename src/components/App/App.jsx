@@ -7,8 +7,10 @@ import Comments from "./Comments/Comments";
 import Review from "../Review/Review";
 import "./App.css";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 function App() {
+  // const feelings = useSelector((store) => store.feelingReducer);
+
   return (
     <Router>
       <div className="App">
@@ -27,7 +29,7 @@ function App() {
           <Route path="/support">
             <Support />
           </Route>
-          <Route path="/comment">
+          <Route path="/comments">
             <Comments />
           </Route>
           <Route path="/review">

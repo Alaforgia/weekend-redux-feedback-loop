@@ -31,13 +31,26 @@ const commentReducer = (state = [], action) => {
   }
   return state;
 };
-
+const reviewReducer = (state = [], action) => {
+  if (action.type === "SHOW_FEEDBACK") {
+    return action.payload;
+  }
+  return state;
+};
+const feedbackReducers = combineReducers({
+  feeling: feelingReducer,
+  understand: understandingReducer,
+  support: supportReducer,
+  comment: commentReducer,
+});
+export default feedbackReducers;
 const reduxStore = createStore(
   combineReducers({
     feelingReducer,
     understandingReducer,
     supportReducer,
     commentReducer,
+    reviewReducer,
   }),
   applyMiddleware(logger)
 );

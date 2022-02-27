@@ -13,7 +13,7 @@ function Feelings() {
       payload: { feeling },
     });
     setFeeling("");
-    history.push("/understanding");
+    // history.push("/understanding");
   };
 
   return (

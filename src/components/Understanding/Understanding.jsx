@@ -12,7 +12,7 @@ function Understanding() {
       payload: { understanding },
     });
     setUnderstanding("");
-    history.push("/");
+    // history.push("/");
   };
   return (
     <>

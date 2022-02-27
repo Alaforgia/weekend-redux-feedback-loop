@@ -19,11 +19,18 @@ const understandingReducer = (state = [], action) => {
   }
   return state;
 };
+const supportReducer = (state = [], action) => {
+  if (action.type === "ADD_SUPPORT") {
+    return action.payload;
+  }
+  return state;
+};
 
 const reduxStore = createStore(
   combineReducers({
     feelingReducer,
     understandingReducer,
+    supportReducer,
   }),
   applyMiddleware(logger)
 );
